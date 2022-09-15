@@ -22,6 +22,7 @@ public class DemoSeniorTest {
         System.out.println("master---Test");
         System.out.println("hot-fix---Test");
         System.out.println("master---Test2");
+        System.out.println("pull---Test3");
     }
     @Autowired
     private Student stu;
