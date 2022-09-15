@@ -16,7 +16,7 @@ public class DemoSeniorTest {
 
     @Test
     public void Test01(){
-        System.out.println("hello---Test");
+        System.out.println("hello2---Test2");
     }
     @Autowired
     private Student stu;
