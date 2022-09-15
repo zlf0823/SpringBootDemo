@@ -19,6 +19,7 @@ public class DemoSeniorTest {
         System.out.println("hello2---Test2");
         System.out.println("hello3---Test3");
         System.out.println("hello4---Test4");
+        System.out.println("master---Test");
     }
     @Autowired
     private Student stu;
