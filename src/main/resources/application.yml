@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  web:
+    resources:
+      static-locations: classpath:/test/
+stu:
+  id: 1
+  name: 张三
+  age: 16
+  sex: 男
