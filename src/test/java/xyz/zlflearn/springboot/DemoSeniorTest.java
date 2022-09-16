@@ -30,4 +30,9 @@ public class DemoSeniorTest {
     public void test1(){
         log.info(stu.toString());
     }
+
+    @Test
+    public void test2(){
+        log.info(stu.toString());
+    }
 }
