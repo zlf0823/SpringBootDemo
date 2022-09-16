@@ -4,7 +4,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import xyz.zlflearn.springboot.bean.Student;
+import xyz.zlflearn.springboot.controller.HelloController;
 
 /**
  * @author zhengLongfei
@@ -34,5 +40,18 @@ public class DemoSeniorTest {
     @Test
     public void test2(){
         log.info(stu.toString());
+    }
+
+    @Test
+    public void testController() throws Exception {
+        //创建mvc环境对象
+        MockMvc mockMvc = MockMvcBuilders.standaloneSetup(HelloController.class).build();
+        //初始化请求链接
+        MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders
+                .post("/test/con");
+        //发送请求接受返回结果
+        MvcResult mvcResult = mockMvc.perform(requestBuilder).andReturn();
+        String message = mvcResult.getResponse().getContentAsString();
+        log.info(message);
     }
 }
